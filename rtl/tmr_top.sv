@@ -13,8 +13,11 @@ module tmr_top(
     logic [15:0] in1, in2, in3;
     
     // instantiate 3 identical MACs
+    (* dont_touch = "true" *)
     mac mac_inst1(.clk, .rst_n, .en, .a_in, .b_in, .out(in1));
+    (* dont_touch = "true" *)
     mac mac_inst2(.clk, .rst_n, .en, .a_in, .b_in, .out(in2));
+    (* dont_touch = "true" *)
     mac mac_inst3(.clk, .rst_n, .en, .a_in, .b_in, .out(in3));
     
     voter voter_inst(.in1, .in2, .in3, .voter_out(final_out), .fault_detected, .system_failure);
