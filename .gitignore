@@ -1,0 +1,10 @@
+*.log
+*.jou
+*.str
+.Xil/
+hd_visual/
+WORK/
+msim/
+*.vstf
+*.wdb
+
